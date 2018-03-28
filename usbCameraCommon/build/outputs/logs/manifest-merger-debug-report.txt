@@ -1,0 +1,23 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml:24:1-54
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml:24:1-54
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml:24:1-54
+	package
+		ADDED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml:24:11-52
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+uses-sdk
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+		ADDED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+		ADDED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml
+		INJECTED from /home/samriddha/AndroidStudioProjects/DockedinOpenTokIntegration/usbCameraCommon/src/main/AndroidManifest.xml

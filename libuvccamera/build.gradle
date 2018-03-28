@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+//import org.apache.tools.ant.taskdefs.condition.Os
+
+android {
+	compileSdkVersion 26
+	buildToolsVersion '26.0.2'
+
+	defaultConfig {
+		minSdkVersion 16
+		targetSdkVersion 26
+		ndk {
+			abiFilters "armeabi"
+		}
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+		}
+	}
+	sourceSets {
+		main {
+			jniLibs.srcDir 'src/main/libs'
+			jni.srcDirs = []
+		}
+	}
+}
+
+tasks.withType(JavaCompile) {
+	compileTask -> compileTask.dependsOn ndkBuild
+}
+
+String getNdkBuildPath() {
+	Properties properties = new Properties()
+	properties.load(project.rootProject.file('local.properties').newDataInputStream())
+	def ndkBuildingDir = properties.getProperty("ndk.dir")
+	def ndkBuildPath = ndkBuildingDir
+
+	ndkBuildPath = ndkBuildingDir + '/ndk-build'
+
+	return ndkBuildPath
+}
+
+task ndkBuild(type: Exec, description: 'Compile JNI source via NDK') {
+	println('executing ndkBuild')
+	def ndkBuildPath = getNdkBuildPath();
+	commandLine ndkBuildPath, '-j8', '-C', file('src/main').absolutePath
+}
+
+task ndkClean(type: Exec, description: 'clean JNI libraries') {
+	println('executing ndkBuild clean')
+	def ndkBuildPath = getNdkBuildPath();
+	commandLine ndkBuildPath, 'clean', '-C', file('src/main').absolutePath
+}
+
+clean.dependsOn 'ndkClean'
+
+dependencies {
+	compile fileTree(dir: new File(buildDir, 'libs'), include: '*.jar')
+	compile "com.android.support:support-annotations:${'25.3.1'}"
+	compile("com.serenegiant:common:${'1.5.20'}") {
+		exclude module: 'support-v4'
+	}
+}

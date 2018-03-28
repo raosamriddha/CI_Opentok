@@ -1,0 +1,31 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://tokbox.bintray.com/maven' }
+        maven { url 'http://raw.github.com/saki4510t/libcommon/master/repository/' }
+        google()
+    }
+
+    ext {
+        supportLibVersion = '25.3.1'  // variable that can be referenced to keep support libs consistent
+        commonLibVersion= '1.5.20'
+        versionBuildTool = '25.0.2'
+        versionCompiler = 26
+        versionTarget = 26
+        versionNameString = '1.0.0'
+        javaSourceCompatibility = JavaVersion.VERSION_1_7
+        javaTargetCompatibility = JavaVersion.VERSION_1_7
+    }
+
+}

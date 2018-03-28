@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
     private static final int RC_VIDEO_APP_PERM = 124;
     private CustomWebcamCapturer mCapturer;
 
-
+    private String test;
     private Camera camera;
     private ImageButton flash_on;
     private ImageButton flash_off;
